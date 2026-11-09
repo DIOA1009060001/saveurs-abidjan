@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saveurs d'Abidjan : découvrez les meilleures spécialités ivoiriennes dans un cadre élégant.">
+  <title>Saveurs d'Abidjan | Restaurant</title>
+  <style>
+    :root {
+      --green: #123b2b;
+      --gold: #c9a45c;
+      --cream: #faf7ef;
+      --dark: #20251f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo { font-size: 21px; font-weight: bold; color: var(--gold); }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(10,30,21,.88), rgba(10,30,21,.25)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1600")
+        center/cover;
+    }
+
+    .hero-content { max-width: 620px; }
+    .eyebrow { color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
+    h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.1; margin: 18px 0; }
+    .hero p { font-size: 18px; margin-bottom: 28px; }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #17271d;
+      padding: 13px 23px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    section { padding: 75px 8%; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title span { color: #a17b38; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+    .section-title h2 { font-size: 34px; color: var(--green); margin-top: 8px; }
+
+    .menu-grid, .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .dish, .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .dish { background: white; box-shadow: 0 5px 20px #0000000c; }
+    .dish img { width: 100%; height: 210px; object-fit: cover; display: block; }
+    .dish-info { padding: 18px; }
+    .dish-info h3 { color: var(--green); }
+    .price { color: #a17b38; font-weight: bold; margin-top: 8px; }
+
+    .about {
+      background: #eae9dc;
+      text-align: center;
+    }
+    .about p { max-width: 750px; margin: 15px auto; }
+
+    .gallery img { height: 230px; object-fit: cover; }
+
+    .reservation { background: var(--green); color: white; }
+    .reservation .section-title h2 { color: white; }
+    form { max-width: 600px; margin: auto; display: grid; gap: 15px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font: inherit;
+    }
+    textarea { min-height: 100px; resize: vertical; }
+
+    .contact { text-align: center; }
+    footer {
+      background: #0c261b;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+    footer span { color: var(--gold); }
+
+    @media (max-width: 750px) {
+      header { flex-direction: column; }
+      nav { justify-content: center; gap: 13px; }
+      .hero { min-height: 500px; }
+      .menu-grid, .gallery { grid-template-columns: 1fr; }
+      section { padding: 55px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SAVEURS D'ABIDJAN</div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#apropos">À propos</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#reservation">Réservation</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <div class="eyebrow">L'art de la cuisine ivoirienne</div>
+      <h1>Le goût authentique de la Côte d'Ivoire.</h1>
+      <p>Des saveurs généreuses, des produits de qualité et un accueil chaleureux au cœur d'Abidjan.</p>
+      <a class="btn" href="#menu">Découvrir notre menu</a>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="section-title">
+      <span>Nos spécialités</span>
+      <h2>Un menu plein de saveurs</h2>
+      <p>Quelques incontournables de notre cuisine.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700" alt="Poisson accompagné de légumes">
+        <div class="dish-info">
+          <h3>Poisson braisé</h3>
+          <p>Poisson grillé, accompagnement et sauce maison.</p>
+          <div class="price">5 000 FCFA</div>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=700" alt="Poulet grillé">
+        <div class="dish-info">
+          <h3>Poulet braisé</h3>
+          <p>Poulet tendre, grillé et délicatement assaisonné.</p>
+          <div class="price">4 500 FCFA</div>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700" alt="Plat traditionnel">
+        <div class="dish-info">
+          <h3>Alloco maison</h3>
+          <p>Bananes plantains dorées et croustillantes.</p>
+          <div class="price">1 500 FCFA</div>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700" alt="Plat mijoté">
+        <div class="dish-info">
+          <h3>Kédjénou</h3>
+          <p>Un délicieux plat mijoté aux saveurs locales.</p>
+          <div class="price">4 000 FCFA</div>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700" alt="Salade composée">
+        <div class="dish-info">
+          <h3>Salade composée</h3>
+          <p>Fraîcheur et gourmandise dans une assiette.</p>
+          <div class="price">2 500 FCFA</div>
+        </div>
+      </article>
+
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700" alt="Pizza">
+        <div class="dish-info">
+          <h3>Menu gourmand</h3>
+          <p>Une suggestion généreuse pour se faire plaisir.</p>
+          <div class="price">5 500 FCFA</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="apropos">
+    <div class="section-title">
+      <span>Notre histoire</span>
+      <h2>Bienvenue chez nous</h2>
+    </div>
+    <p>Saveurs d'Abidjan célèbre la richesse de la cuisine ivoirienne. Notre ambition est de proposer une expérience chaleureuse, élégante et gourmande, où chaque repas devient un moment de partage.</p>
+    <p><strong>Notre promesse :</strong> qualité, fraîcheur et convivialité.</p>
+  </section>
+
+  <section id="galerie">
+    <div class="section-title">
+      <span>En images</span>
+      <h2>Notre univers gourmand</h2>
+    </div>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700" alt="Cuisine généreuse">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700" alt="Assiette fraîche">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700" alt="Plat coloré">
+    </div>
+  </section>
+
+  <section class="reservation" id="reservation">
+    <div class="section-title">
+      <span>Votre table vous attend</span>
+      <h2>Réserver une table</h2>
+      <p>Remplissez ce formulaire pour préparer votre demande.</p>
+    </div>
+
+    <form id="bookingForm">
+      <input id="clientName" type="text" placeholder="Votre nom" required>
+      <input id="clientPhone" type="tel" placeholder="Votre numéro de téléphone" required>
+      <input id="bookingDate" type="date" required>
+      <select id="guestCount" required>
+        <option value="">Nombre de personnes</option>
+        <option>1 personne</option>
+        <option>2 personnes</option>
+        <option>3 personnes</option>
+        <option>4 personnes</option>
+        <option>5 personnes ou plus</option>
+      </select>
+      <textarea id="bookingMessage" placeholder="Votre message (facultatif)"></textarea>
+      <button class="btn" type="submit">Préparer ma réservation</button>
+    </form>
+    <p id="bookingResult" style="text-align:center;margin-top:15px;"></p>
+  </section>
+
+  <section class="contact">
+    <div class="section-title">
+      <span>Restons en contact</span>
+      <h2>Nous rendre visite</h2>
+    </div>
+    <p><strong>Adresse :</strong> Abidjan, Côte d'Ivoire (adresse de démonstration)</p>
+    <p><strong>Téléphone :</strong> À renseigner</p>
+    <p><strong>Horaires :</strong> Lundi au dimanche, 10h – 23h (horaires fictifs)</p>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> <span>Saveurs d'Abidjan</span> — Site de démonstration réalisé par DIOM SERVICE.</p>
+  <p>Créer • Innover • Réussir</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("clientName").value;
+    const phone = document.getElementById("clientPhone").value;
+    const date = document.getElementById("bookingDate").value;
+    const guests = document.getElementById("guestCount").value;
+    const message = document.getElementById("bookingMessage").value;
+
+    const text = `Bonjour Saveurs d'Abidjan ! Je souhaite réserver une table.
+Nom : ${name}
+Téléphone : ${phone}
+Date : ${date}
+Nombre de personnes : ${guests}
+Message : ${message}`;
+
+    document.getElementById("bookingResult").textContent =
+      "Votre demande est prête. Le numéro WhatsApp du restaurant devra être configuré pour l'envoi.";
+    console.log(text);
+  });
+</script>
+
+</body>
+</html>
